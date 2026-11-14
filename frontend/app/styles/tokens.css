@@ -1,0 +1,238 @@
+/* Theme tokens. Every color, typeface, corner and shadow on the site comes from here.
+   A [data-theme] element can sit inside another theme (the admin preview cards), so the shared block below
+   is declared on [data-theme] too: its var() references then resolve against the nearest theme. */
+
+:root,
+[data-theme='midnight'],
+[data-theme='survey-map'] .dt-scene {
+  color-scheme: dark;
+  --bg-base: #090d16;
+  --bg-image:
+    radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.03) 0%, transparent 60%);
+  --bg-surface: #0e1524;
+  --bg-card: #101828;
+  --bg-elevated: #121a2d;
+  --bg-sunken: #070a12;
+  --line: rgba(255, 255, 255, 0.05);
+  --line-strong: rgba(255, 255, 255, 0.1);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-dim: #475569;
+  --accent: #38bdf8;
+  --accent-ink: #06202e;
+  --accent-2: #10b981;
+  --accent-3: #8b5cf6;
+  --accent-soft: #7dd3fc;
+  --ok-soft: #6ee7b7;
+  --warn-soft: #fde68a;
+  --danger-soft: #fca5a5;
+  --accent-3-soft: #d8b4fe;
+  --shadow-color: #000000;
+  --status-ok: #10b981;
+  --status-warn: #f59e0b;
+  --status-danger: #f43f5e;
+  --signal-green: #10b981;
+  --signal-amber: #f59e0b;
+  --signal-red: #ef4444;
+  --radius-sm: 8px;
+  --radius: 16px;
+  --radius-lg: 20px;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --map-base: dark;
+  --scene-bg: #060a13;
+  --scene-ground: #0b1322;
+  --scene-basemap-alpha: 0.55;
+  --scene-atmosphere: 1;
+  --scene-road-casing: #24344d;
+  --scene-road-center: #2f6f92;
+  --scene-vehicle: #e0f7ff;
+  --scene-heat-low: #38bdf8;
+  --scene-heat-mid: #a78bfa;
+  --scene-heat-high: #f43f5e;
+  --road-free: #2dd4bf;
+  --road-normal: #38bdf8;
+  --road-busy: #facc15;
+  --road-heavy: #fb923c;
+  --road-severe: #f43f5e;
+  --road-blocked: #d946ef;
+  --msg-traffic: #7dd3fc;
+  --msg-proposal: #a78bfa;
+  --msg-congestion: #fbbf24;
+  --msg-central: #e879f9;
+  --msg-signal: #34d399;
+  --msg-emergency: #fb7185;
+  --msg-health: #f87171;
+  --veh-car: #3594ec;
+  --veh-motorcycle: #1fa971;
+  --veh-bus: #a36bf0;
+  --veh-truck: #d96f28;
+  --veh-bicycle: #e0559b;
+}
+
+[data-theme='night-road'] {
+  color-scheme: dark;
+  --bg-base: #17181a;
+  --bg-image: none;
+  --bg-surface: #222326;
+  --bg-card: #222326;
+  --bg-elevated: #2b2c30;
+  --bg-sunken: #111214;
+  --line: #2f3034;
+  --line-strong: #3a3b3f;
+  --text-primary: #f6f1e3;
+  --text-secondary: #aaa79d;
+  --text-muted: #8e8b82;
+  --text-dim: #6f6d66;
+  --accent: #ffb000;
+  --accent-ink: #17181a;
+  --accent-2: #3ddc84;
+  --accent-3: #7cc4ff;
+  --accent-soft: #ffd166;
+  --ok-soft: #8debb6;
+  --warn-soft: #ffb27f;
+  --danger-soft: #ff9c96;
+  --accent-3-soft: #b4dcff;
+  --shadow-color: #000000;
+  --status-ok: #3ddc84;
+  --status-warn: #ff8a3d;
+  --status-danger: #ff5a52;
+  --signal-green: #3ddc84;
+  --signal-amber: #ffb000;
+  --signal-red: #ff5a52;
+  --radius-sm: 2px;
+  --radius: 3px;
+  --radius-lg: 4px;
+  --shadow-1: none;
+  --shadow-2: 0 10px 24px rgba(0, 0, 0, 0.5);
+  --font-main: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Saira Condensed', 'Arial Narrow', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --map-base: dark;
+  --scene-bg: #0d0e10;
+  --scene-ground: #17181a;
+  --scene-basemap-alpha: 0.45;
+  --scene-atmosphere: 0;
+  --scene-road-casing: #3a3b3f;
+  --scene-road-center: #ffb000;
+  --scene-vehicle: #f6f1e3;
+  --scene-heat-low: #ffb000;
+  --scene-heat-mid: #ff8a3d;
+  --scene-heat-high: #ff5a52;
+  --road-free: #3ddc84;
+  --road-normal: #a3c95b;
+  --road-busy: #ffd166;
+  --road-heavy: #ff9a3d;
+  --road-severe: #ff5a52;
+  --road-blocked: #d65cff;
+  --msg-traffic: #f6f1e3;
+  --msg-proposal: #ffd166;
+  --msg-congestion: #ff9a3d;
+  --msg-central: #d65cff;
+  --msg-signal: #3ddc84;
+  --msg-emergency: #ff5a52;
+  --msg-health: #ff8a80;
+  --veh-car: #3594ec;
+  --veh-motorcycle: #1fa971;
+  --veh-bus: #a36bf0;
+  --veh-truck: #d96f28;
+  --veh-bicycle: #e0559b;
+}
+
+[data-theme='survey-map'] {
+  color-scheme: light;
+  --bg-base: #eef3ee;
+  --bg-image: none;
+  --bg-surface: #fbfcf8;
+  --bg-card: #fbfcf8;
+  --bg-elevated: #ffffff;
+  --bg-sunken: #e2eae3;
+  --line: #dbe4dc;
+  --line-strong: #cdd8cf;
+  --text-primary: #10302e;
+  --text-secondary: #3f5a56;
+  --text-muted: #55706b;
+  --text-dim: #6d8681;
+  --accent: #006f6b;
+  --accent-ink: #ffffff;
+  --accent-2: #d9480f;
+  --accent-3: #4c4f9e;
+  --accent-soft: #00514e;
+  --ok-soft: #07603e;
+  --warn-soft: #7d4700;
+  --danger-soft: #8f1515;
+  --accent-3-soft: #3b3e85;
+  --shadow-color: #10302e;
+  --status-ok: #0a7a4f;
+  --status-warn: #a15c00;
+  --status-danger: #b91c1c;
+  --signal-green: #0a7a4f;
+  --signal-amber: #b86e00;
+  --signal-red: #c92a2a;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow-1: 0 1px 2px rgba(16, 48, 46, 0.08);
+  --shadow-2: 0 10px 28px rgba(16, 48, 46, 0.14);
+  --font-main: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --map-base: light;
+  --scene-bg: #dfe8e0;
+  --scene-ground: #e7eee4;
+  --scene-basemap-alpha: 0.8;
+  --scene-atmosphere: 0;
+  --scene-road-casing: #2f4a46;
+  --scene-road-center: #fbfcf8;
+  --scene-vehicle: #00514e;
+  --scene-heat-low: #006f6b;
+  --scene-heat-mid: #d9480f;
+  --scene-heat-high: #8f1515;
+  --road-free: #0a7a4f;
+  --road-normal: #006f6b;
+  --road-busy: #a86a00;
+  --road-heavy: #d9480f;
+  --road-severe: #b3161b;
+  --road-blocked: #6b1a8f;
+  --msg-traffic: #005f8a;
+  --msg-proposal: #4b3fa8;
+  --msg-congestion: #b86e00;
+  --msg-central: #7b1fa2;
+  --msg-signal: #0a7a4f;
+  --msg-emergency: #c92a2a;
+  --msg-health: #8f1515;
+  --veh-car: #1f6fd1;
+  --veh-motorcycle: #0f8a5a;
+  --veh-bus: #7a3fc4;
+  --veh-truck: #c8560f;
+  --veh-bicycle: #c2307f;
+}
+
+/* Shared derived tokens, and the older names the stylesheet still uses until each module is migrated. */
+:root,
+[data-theme],
+[data-theme='survey-map'] .dt-scene {
+  --wave: var(--signal-green);
+  --bg-surface-elevated: var(--bg-elevated);
+  --bg-surface-sunken: var(--bg-sunken);
+  --border-subtle: var(--line);
+  --border-highlight: var(--line-strong);
+  --border-accent: color-mix(in srgb, var(--accent) 30%, transparent);
+  --accent-cyan: var(--accent);
+  --accent-emerald: var(--status-ok);
+  --accent-amber: var(--status-warn);
+  --accent-rose: var(--status-danger);
+  --accent-indigo: var(--accent-3);
+  --accent-violet: var(--accent-3);
+  --neu-flat: var(--shadow-1);
+  --neu-elevated: var(--shadow-2);
+  --neu-floating: var(--shadow-2);
+  --neu-inset: inset 0 1px 2px rgba(0, 0, 0, 0.18);
+  --neu-inset-glow: inset 0 1px 2px rgba(0, 0, 0, 0.18), 0 0 0 1px var(--border-accent);
+}

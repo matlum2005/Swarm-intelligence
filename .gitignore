@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
+frontend/.vercel/
+.vercel/
+frontend_backup/
+backups/
+
+# Java
+backend/target/
+
+# Local runtime artifacts
+experiments/runs/
+simulation/scenarios/grid3x3/build.net.xml
+*.log
+.env
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Generated SUMO networks (rebuilt from simulation/config/networks.json)
+simulation/scenarios/generated/
+# Real-world areas downloaded from OpenStreetMap through the lab (regenerate from the lab UI)
+simulation/scenarios/osm/user/
+
+# Lab jobs and evaluation-matrix raw runs (large; regenerate with the documented commands)
+experiments/lab/jobs/
+experiments/evaluation/
+
+# Local brainstorm/plan workspace
+.superpowers/
+
+# Live Camera: frames, models, uploads and encrypted credentials
+camera_service/runtime/
+yolo*.pt
+deploy/live-camera/frigate.yml
+.playwright-mcp/
+
+# Large archives (not for version control)
+*.zip
